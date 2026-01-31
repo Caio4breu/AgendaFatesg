@@ -29,7 +29,7 @@
    *   **Exclusão Lógica**: Ao excluir, o contato é marcado como inativo (não some do arquivo).
    *   **Recuperação**: Tentar cadastrar um nome inativo oferece ao usuário a opção de reativá-lo.
 # 💻 Como Executar
-  *   **Clone o repositório**: git clone [URL_DO_REPO]
+  *   **Clone o repositório**: git clone https://github.com/marquesclayton/ads3.contatos.git
    *   Abra o projeto no NetBeans IDE.
    *   Certifique-se de que o JDK está configurado (versão 21 ou superior).
    *   Execute a classe view.ListaContatos.
