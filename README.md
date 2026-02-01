@@ -30,6 +30,25 @@
    *   **Recuperação**: Tentar cadastrar um nome inativo oferece ao usuário a opção de reativá-lo.
 # 💻 Como Executar
   *   **Clone o repositório**: git clone https://github.com/marquesclayton/ads3.contatos.git
+
+# Diagrama de Componente
+componentDiagram
+  package "Interface do Usuário (View)" {
+    [ListaContatos.java] 
+    [TelaCadastro.java]
+  }
+
+  node "Sistema de Arquivos" {
+    [agenda.txt]
+  }
+
+  note right of [TelaCadastro.java] : Contém:\n- Layout\n- Validação de Campos\n- Lógica de Duplicidade\n- Escrita em TXT (FileWriter)
+  
+  note left of [ListaContatos.java] : Contém:\n- Layout\n- Leitura de TXT (FileReader)\n- Lógica de Filtro\n- Navegação entre Telas
+
+  [ListaContatos.java] --> [agenda.txt] : Lê diretamente
+  [TelaCadastro.java] --> [agenda.txt] : Escreve diretamente
+  [ListaContatos.java] <--> [TelaCadastro.java] : Dependência Mútua
    *   Abra o projeto no NetBeans IDE.
    *   Certifique-se de que o JDK está configurado (versão 21 ou superior).
    *   Execute a classe view.ListaContatos.
